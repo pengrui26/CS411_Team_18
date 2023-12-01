@@ -1,11 +1,11 @@
 package com.laioffer.twitch;
 
 
-import com.laioffer.twitch.external.model.Clip;
-import com.laioffer.twitch.external.model.Game;
-import com.laioffer.twitch.external.model.Stream;
+import com.laioffer.twitch.model.Clip;
+import com.laioffer.twitch.model.Game;
+import com.laioffer.twitch.model.Stream;
 import com.laioffer.twitch.external.TwitchService;
-import com.laioffer.twitch.external.model.Video;
+import com.laioffer.twitch.model.Video;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;

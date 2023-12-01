@@ -1,4 +1,4 @@
-package com.laioffer.twitch.external.model;
+package com.laioffer.twitch.model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
