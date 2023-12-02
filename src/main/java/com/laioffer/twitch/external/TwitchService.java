@@ -1,10 +1,10 @@
 package com.laioffer.twitch.external;
 
 
-import com.laioffer.twitch.model.Clip;
-import com.laioffer.twitch.model.Game;
-import com.laioffer.twitch.model.Stream;
-import com.laioffer.twitch.model.Video;
+import com.laioffer.twitch.external.model.Clip;
+import com.laioffer.twitch.external.model.Game;
+import com.laioffer.twitch.external.model.Stream;
+import com.laioffer.twitch.external.model.Video;
 import org.springframework.stereotype.Service;
 
 

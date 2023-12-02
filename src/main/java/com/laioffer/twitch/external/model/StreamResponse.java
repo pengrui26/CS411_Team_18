@@ -1,4 +1,4 @@
-package com.laioffer.twitch.model;
+package com.laioffer.twitch.external.model;
 
 
 import java.util.List;

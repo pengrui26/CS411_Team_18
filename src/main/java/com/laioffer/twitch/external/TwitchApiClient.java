@@ -1,10 +1,10 @@
 package com.laioffer.twitch.external;
 
 
-import com.laioffer.twitch.model.ClipResponse;
-import com.laioffer.twitch.model.GameResponse;
-import com.laioffer.twitch.model.StreamResponse;
-import com.laioffer.twitch.model.VideoResponse;
+import com.laioffer.twitch.external.model.ClipResponse;
+import com.laioffer.twitch.external.model.GameResponse;
+import com.laioffer.twitch.external.model.StreamResponse;
+import com.laioffer.twitch.external.model.VideoResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
