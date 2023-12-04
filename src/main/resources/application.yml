@@ -30,17 +30,13 @@ spring:
     username: ${DATABASE_USERNAME:root}
     password: ${DATABASE_PASSWORD:secret}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    sql:
-      init:
-        mode: ${INIT_DB:always}
-        schema-locations: "classpath:database-init.sql"
-
-
+  sql:
+    init:
+      mode: ${INIT_DB:always}
+      schema-locations: "classpath:database-init.sql"
 
 logging:
   level:
     org.apache.coyote.http11.Http11InputBuffer: DEBUG # Incoming http requests
     com.laioffer.twitch.external.TwitchApiClient: DEBUG
     org.springframework.jdbc.core: DEBUG # SQL
-
-
