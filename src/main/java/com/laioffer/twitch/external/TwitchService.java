@@ -8,7 +8,6 @@ import com.laioffer.twitch.external.model.Video;
 import org.springframework.stereotype.Service;
 
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +49,7 @@ public class TwitchService {
     }
 
 
-    public List<String> getTopGameIds() throws IOException {
+    public List<String> getTopGameIds() {
         List<String> topGameIds = new ArrayList<>();
         for (Game game : getTopGames()) {
             topGameIds.add(game.id());
