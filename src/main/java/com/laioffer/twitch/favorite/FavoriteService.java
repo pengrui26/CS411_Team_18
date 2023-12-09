@@ -6,6 +6,8 @@ import com.laioffer.twitch.db.entity.FavoriteRecordEntity;
 import com.laioffer.twitch.db.entity.ItemEntity;
 import com.laioffer.twitch.db.entity.UserEntity;
 import com.laioffer.twitch.external.model.TypeGroupedItemList;
+import com.laioffer.twitch.external.model.TypeGroupedItemList;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,16 +16,15 @@ import java.util.List;
 
 @Service
 public class FavoriteService {
-
     private final ItemRepository itemRepository;
     private final FavoriteRecordRepository favoriteRecordRepository;
 
-    public FavoriteService(ItemRepository itemRepository,
-                           FavoriteRecordRepository favoriteRecordRepository) {
+    public FavoriteService(ItemRepository itemRepository, FavoriteRecordRepository favoriteRecordRepository) {
         this.itemRepository = itemRepository;
         this.favoriteRecordRepository = favoriteRecordRepository;
     }
 
+    @CacheEvict(cacheNames = "recommend_items", key = "#root.args[0]")
     @Transactional
     public void setFavoriteItem(UserEntity user, ItemEntity item) throws DuplicateFavoriteException {
         ItemEntity persistedItem = itemRepository.findByTwitchId(item.twitchId());
@@ -37,6 +38,7 @@ public class FavoriteService {
         favoriteRecordRepository.save(favoriteRecord);
     }
 
+    @CacheEvict(cacheNames = "recommend_items", key = "#root.args[0]")
     public void unsetFavoriteItem(UserEntity user, String twitchId) {
         ItemEntity item = itemRepository.findByTwitchId(twitchId);
         if (item != null) {
@@ -50,7 +52,9 @@ public class FavoriteService {
     }
 
     public TypeGroupedItemList getGroupedFavoriteItems(UserEntity user) {
-        List<ItemEntity> items = getFavoriteItems(user);
-        return new TypeGroupedItemList(items);
+        List<ItemEntity> favoriteItems = getFavoriteItems(user);
+        return new TypeGroupedItemList(favoriteItems);
     }
 }
+
+
