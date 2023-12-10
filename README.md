@@ -8,14 +8,14 @@
 
 **Backend**:
 
-- Pengrui Fan
-- Haocheng Liu
+- Pengrui Fan - pengruif@bu.edu
+- Haocheng Liu - easonlhc@bu.edu
 
 **Frontend**:
 
 - Pengrui Fan
-- Hang Ji
-- Xinyu Chen
+- Hang Ji - jihang30@bu.edu
+- Xinyu Chen - xinyu001@bu.edu
 
 ## Project Overview
 
