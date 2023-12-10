@@ -22,12 +22,6 @@ function PageHeader({
               Logout
             </Button>
           )}
-          {!loggedIn && (
-            <>
-              <Login onSuccess={signinOnSuccess} />
-              <Register />
-            </>
-          )}
         </Col>
       </Row>
     </Header>

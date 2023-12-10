@@ -11,6 +11,7 @@ import {
 import PageHeader from "./components/PageHeader";
 import CustomSearch from "./components/CustomSearch";
 import Home from "./components/Home";
+import Chat from "./components/Chat";
 
 const { Header, Content, Sider } = Layout;
 
@@ -132,7 +133,7 @@ function App() {
             style={{
               padding: 24,
               margin: 0,
-              height: 800,
+              minHeight: 800,
               overflow: "auto",
             }}
           >
@@ -142,6 +143,7 @@ function App() {
               favoriteOnChange={favoriteOnChange}
               favoriteItems={favoriteItems}
             />
+            <Chat />
           </Content>
         </Layout>
       </Layout>
