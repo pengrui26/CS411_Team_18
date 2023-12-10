@@ -1,6 +1,10 @@
 # Twitch +: A Personalized Twitch Resources Recommendation Engine with OpenAI support
 
-## Team Members
+## Team 18
+
+### Demo Link:
+
+- https://drive.google.com/file/d/1CUPy70EKACrKXNUac8LDpMgQqIgrDia0/view?usp=drive_link
 
 **Backend**:
 
@@ -21,8 +25,8 @@ Twitch + is a full-stack Spring Boot application for users to search Twitch reso
 
 - **Search & Recommendations**: Easily search Twitch resources and get personalized recommendations based on Top Games.
 - **Real-time Twitch Resources**: Fetch real-time resources using Twitch API.
-- **Data Storage**: Use MySQL for storing user-generated data, such as favorite items and user informations.
-- **User Authentication**: Integrated registration, login, and logout functionalities with Spring Security, and achieved login with Github account by OAuth2.
+- **Data Storage**: Use MySQL for storing user-generated data, such as user informations.
+- **User Authentication**: Achieved login with Github account by OAuth2.
 - **User-Friendly UI**: Engaging frontend design using React and Ant Design.
 
 ## Technical Stack
